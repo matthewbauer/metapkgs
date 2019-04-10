@@ -1,0 +1,8 @@
+* Usage
+
+You can reference this in your own repo using fetchTarball:
+
+#+BEGIN_SRC nix
+let metapkgs = import (builtins.fetchTarball "https://github.com/matthewbauer/metapkgs/archive/master.tar.gz");
+in metapkgs.ghc7102
+#+END_SRC
