@@ -1,6 +1,12 @@
 * Usage
 
-You can reference this in your own repo using fetchTarball:
+To get a particular version of ghc, run this from the command line:
+
+#+BEGIN_SRC sh
+$ nix run -f https://github.com/matthewbauer/metapkgs/archive/master.tar.gz ghc7102
+#+END_SRC
+
+Alternatively, You can reference this in your own repo using fetchTarball:
 
 #+BEGIN_SRC nix
 let metapkgs = import (builtins.fetchTarball "https://github.com/matthewbauer/metapkgs/archive/master.tar.gz");
