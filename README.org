@@ -1,9 +1,15 @@
 * Usage
 
-To get a particular version of ghc, run this from the command line:
+There are a few ways to use this. To get a particular version of ghc, run this from the command line:
 
 #+BEGIN_SRC sh
 $ nix run -f https://github.com/matthewbauer/metapkgs/archive/master.tar.gz ghc7102
+#+END_SRC
+
+This will only give you ghc-7.10.2 temporarily. To install it permanently to your environment you can do:
+
+#+BEGIN_SRC sh
+$ nix-env -f https://github.com/matthewbauer/metapkgs/archive/master.tar.gz -iA ghc843
 #+END_SRC
 
 Alternatively, You can reference this in your own repo using fetchTarball:
